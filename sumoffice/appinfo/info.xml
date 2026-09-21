@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<info xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://apps.nextcloud.com/schema/apps/info.xsd">
+	<id>sumoffice</id>
+	<name>SumOffice Office</name>
+	<summary>Excel and Word files keep working — macros, Power Query, files back intact — with the SumOffice editors as your Office server</summary>
+	<description><![CDATA[Connects Nextcloud Office to a **SumOffice** server — SumSheet for .xlsx / .xlsm / .xlsb and SumDoc for .docx — with one field: the address of your SumOffice stack.
+
+What you get:
+
+* **Your Excel files keep working.** A workbook with macros and Power Query opens from Files, is edited in the browser, and comes back with its VBA project byte for byte; Excel opens it clean.
+* **Word documents the same way**, pictures and charts intact.
+* **Nothing leaves your servers**: the editors run in your own Docker (`hissih/sumsheet-webhost`, `hissih/sumdoc-webhost`), Nextcloud stays the WOPI host.
+
+This app is the installer: it points the standard Nextcloud Office (richdocuments) app at your SumOffice server, checks the discovery and capabilities endpoints, and shows what the server offers. It requires Nextcloud Office to be installed.
+
+Three steps, measured on a real macro workbook: https://sumoffice.com/nextcloud]]></description>
+	<version>0.1.1</version>
+	<licence>agpl</licence>
+	<author mail="hello@sumoffice.com" homepage="https://sumoffice.com">SumOffice</author>
+	<namespace>SumOffice</namespace>
+	<category>office</category>
+	<category>integration</category>
+	<website>https://sumoffice.com/nextcloud</website>
+	<bugs>mailto:hello@sumoffice.com</bugs>
+	<repository>https://github.com/SumOfficeApp/sumoffice-nextcloud</repository>
+	<screenshot>https://sumoffice.com/media/nextcloud-app-settings.png</screenshot>
+	<dependencies>
+		<nextcloud min-version="29" max-version="32"/>
+	</dependencies>
+	<settings>
+		<admin>OCA\SumOffice\Settings\Admin</admin>
+		<admin-section>OCA\SumOffice\Settings\AdminSection</admin-section>
+	</settings>
+</info>

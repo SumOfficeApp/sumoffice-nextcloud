@@ -1,0 +1,6 @@
+.sumoffice-row{display:flex;gap:8px;align-items:center;max-width:640px}
+.sumoffice-row input{flex:1}
+.sumoffice-status{margin-top:12px;max-width:640px}
+.sumoffice-ok{color:var(--color-success-text,#2d7b2d)}
+.sumoffice-warn,.sumoffice-errors{color:var(--color-error-text,#b02a2a)}
+.sumoffice-errors{padding-left:1.2em}
