@@ -14,14 +14,14 @@ What you get:
 This app is the installer: it points the standard Nextcloud Office (richdocuments) app at your SumOffice server, checks the discovery and capabilities endpoints, and shows what the server offers. It requires Nextcloud Office to be installed.
 
 Three steps, measured on a real macro workbook: https://sumoffice.com/nextcloud]]></description>
-	<version>0.1.1</version>
+	<version>0.1.2</version>
 	<licence>agpl</licence>
 	<author mail="hello@sumoffice.com" homepage="https://sumoffice.com">SumOffice</author>
 	<namespace>SumOffice</namespace>
 	<category>office</category>
 	<category>integration</category>
 	<website>https://sumoffice.com/nextcloud</website>
-	<bugs>mailto:hello@sumoffice.com</bugs>
+	<bugs>https://github.com/SumOfficeApp/sumoffice-nextcloud/issues</bugs>
 	<repository>https://github.com/SumOfficeApp/sumoffice-nextcloud</repository>
 	<screenshot>https://sumoffice.com/media/nextcloud-app-settings.png</screenshot>
 	<dependencies>
