@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <info xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://apps.nextcloud.com/schema/apps/info.xsd">
 	<id>sumoffice</id>
-	<name>SumOffice Office</name>
-	<summary>Excel and Word files keep working — macros, Power Query, files back intact — with the SumOffice editors as your Office server</summary>
+	<name>Excel &amp; Word with Macros — SumOffice</name>
+	<summary>Edit office documents in your browser — Excel with macros (xlsm, xlsb) and Word, through Nextcloud Office</summary>
 	<description><![CDATA[Connects Nextcloud Office to a **SumOffice** server — SumSheet for .xlsx / .xlsm / .xlsb and SumDoc for .docx — with one field: the address of your SumOffice stack.
 
 What you get:
@@ -13,14 +13,14 @@ What you get:
 
 This app is the installer: it points the standard Nextcloud Office (richdocuments) app at your SumOffice server, checks the discovery and capabilities endpoints, and shows what the server offers. It requires Nextcloud Office to be installed. One rule to save you an evening: the address you give Nextcloud Office must be the address the browser itself can reach, over https (or the same origin as Nextcloud) — otherwise the editor frame is blocked by the content-security policy and the session cookie never arrives.
 
-Three steps, measured on a real macro workbook: https://sumoffice.com/nextcloud]]></description>
-	<version>0.1.3</version>
+Three steps, measured on a real macro workbook: https://sumoffice.com/nextcloud.html]]></description>
+	<version>0.1.4</version>
 	<licence>agpl</licence>
 	<author mail="hello@sumoffice.com" homepage="https://sumoffice.com">SumOffice</author>
 	<namespace>SumOffice</namespace>
 	<category>office</category>
 	<category>integration</category>
-	<website>https://sumoffice.com/nextcloud</website>
+	<website>https://sumoffice.com/nextcloud.html</website>
 	<bugs>https://github.com/SumOfficeApp/sumoffice-nextcloud/issues</bugs>
 	<repository>https://github.com/SumOfficeApp/sumoffice-nextcloud</repository>
 	<screenshot>https://raw.githubusercontent.com/SumOfficeApp/sumoffice-nextcloud/main/img/store/workbook-macros.png</screenshot>
