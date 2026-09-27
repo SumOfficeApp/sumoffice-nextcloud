@@ -1,3 +1,14 @@
+## 0.1.5 — 2026-09-27
+- Release metadata now matches the measured 27 September editor images.
+- Two different Nextcloud users can edit the same XLSM or DOCX without the later
+  save silently erasing the earlier user's change.
+- The installer code is unchanged; publish the app archive separately from the
+  Docker images only after App Store approval.
+
+## 0.1.4 — 2026-09-26
+- Release archive no longer contains macOS AppleDouble entries, so Nextcloud sees
+  exactly one top-level `sumoffice` directory and can install the package.
+
 ## 0.1.3 — 2026-09-26
 - Store card: two screenshots of the editors (a macro workbook and a document) next to the admin settings page.
 - Description states the address rule that causes almost every "document failed to load": the address you give

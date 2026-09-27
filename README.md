@@ -19,10 +19,19 @@ Connects **Nextcloud Office** (richdocuments) to a self-hosted **SumOffice** sta
 
 From the Nextcloud app store (category Office), or manually: unpack the release archive into `apps/sumoffice` and enable the app. Then Settings → Administration → SumOffice → address → Connect.
 
+## Collaboration measured for the 27 September images
+
+On Nextcloud 31 with Nextcloud Office 8.8.2, two different users edited the same
+XLSM and DOCX through the normal Files flow. Both users' changes survived in each
+final file. The XLSM kept its VBA project byte-for-byte; Microsoft Excel and Word
+opened the results without repair dialogs. Use the pinned `2026.09.27-amd64`
+editor images from `SumOfficeApp/sumoffice-docker`.
+
 ## What does not survive yet (honestly)
 
 - Power Query is preserved, not refreshed, in the browser editor (refresh is in the desktop app).
-- One editor per document at a time; a second person gets read-only.
+- This collaboration result is measured for Nextcloud/WOPI. Other host adapters
+  need their own acceptance run before concurrent editing is promised there.
 - Macros routed "Excel bridge" (COM automation, some ActiveX) stay in Excel; the report names each one.
 
 ## Licence and support
