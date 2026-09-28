@@ -1,3 +1,17 @@
+## 0.1.5 — 2026-09-28
+- Release metadata now matches the measured 28 September editor images
+  (`2026.09.28-amd64`).
+- Two different Nextcloud users can edit the same **workbook** without the later save
+  erasing the earlier user's change. Measured; on the previous images the same round
+  did not reach typing and the file was rewritten without either change.
+- Simultaneous editing of one **document** (DOCX) is not claimed: it was not measured.
+- The installer code is unchanged; publish the app archive separately from the
+  Docker images only after App Store approval.
+
+## 0.1.4 — 2026-09-26
+- Release archive no longer contains macOS AppleDouble entries, so Nextcloud sees
+  exactly one top-level `sumoffice` directory and can install the package.
+
 ## 0.1.3 — 2026-09-26
 - Store card: two screenshots of the editors (a macro workbook and a document) next to the admin settings page.
 - Description states the address rule that causes almost every "document failed to load": the address you give

@@ -9,12 +9,15 @@ What you get:
 
 * **Your Excel files keep working.** A workbook with macros and Power Query opens from Files, is edited in the browser, and comes back with its VBA project byte for byte; Excel opens it clean.
 * **Word documents the same way**, pictures and charts intact.
+* **Two people can edit one workbook together through Nextcloud Office.** Measured on the
+  28 September editor images: both users' changes stay in the file. Documents (DOCX) are
+  single-editor for now — we do not claim simultaneous Word editing.
 * **Nothing leaves your servers**: the editors run in your own Docker (`hissih/sumsheet-webhost`, `hissih/sumdoc-webhost`), Nextcloud stays the WOPI host.
 
 This app is the installer: it points the standard Nextcloud Office (richdocuments) app at your SumOffice server, checks the discovery and capabilities endpoints, and shows what the server offers. It requires Nextcloud Office to be installed. One rule to save you an evening: the address you give Nextcloud Office must be the address the browser itself can reach, over https (or the same origin as Nextcloud) — otherwise the editor frame is blocked by the content-security policy and the session cookie never arrives.
 
 Three steps, measured on a real macro workbook: https://sumoffice.com/nextcloud.html]]></description>
-	<version>0.1.4</version>
+	<version>0.1.5</version>
 	<licence>agpl</licence>
 	<author mail="hello@sumoffice.com" homepage="https://sumoffice.com">SumOffice</author>
 	<namespace>SumOffice</namespace>
