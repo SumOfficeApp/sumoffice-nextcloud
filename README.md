@@ -31,7 +31,10 @@ On Nextcloud 31.0.14 with Nextcloud Office 8.8.2, through the normal Files flow:
   valid. **Two users in one DOCX was not measured**, so this release does not claim
   simultaneous Word editing.
 - Package integrity was checked directly (parts, media, ZIP structure, VBA bytes).
-  Opening the results in desktop Excel and Word was not repeated for this release.
+- **Desktop Microsoft Excel and Word opened the returned files with no repair
+  dialog** — measured 29 September against the published image by digest
+  (`sha256:527afe26004a…`), with a known-good and a deliberately damaged file in the
+  same run, so a quiet "clean" is a real observation.
 
 Use the pinned `2026.09.28-amd64` editor images from `SumOfficeApp/sumoffice-docker`.
 
