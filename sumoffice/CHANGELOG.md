@@ -1,7 +1,10 @@
-## 0.1.5 — 2026-09-27
-- Release metadata now matches the measured 27 September editor images.
-- Two different Nextcloud users can edit the same XLSM or DOCX without the later
-  save silently erasing the earlier user's change.
+## 0.1.5 — 2026-09-28
+- Release metadata now matches the measured 28 September editor images
+  (`2026.09.28-amd64`).
+- Two different Nextcloud users can edit the same **workbook** without the later save
+  erasing the earlier user's change. Measured; on the previous images the same round
+  did not reach typing and the file was rewritten without either change.
+- Simultaneous editing of one **document** (DOCX) is not claimed: it was not measured.
 - The installer code is unchanged; publish the app archive separately from the
   Docker images only after App Store approval.
 
