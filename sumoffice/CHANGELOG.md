@@ -5,9 +5,9 @@
   erasing the earlier user's change. Measured; on the previous images the same round
   did not reach typing and the file was rewritten without either change.
 - Simultaneous editing of one **document** (DOCX) is not claimed: it was not measured.
-- Excel and Word open the returned files with no repair dialog — re-measured
-  29 September against the published image by digest, with a known-good and a
-  damaged file in the same run.
+- Excel and Word open the returned files with no repair dialog — re-measured 29 September
+  against the published image by digest, with a known-good and a damaged file in the
+  same run.
 - The installer code is unchanged; publish the app archive separately from the
   Docker images only after App Store approval.
 
