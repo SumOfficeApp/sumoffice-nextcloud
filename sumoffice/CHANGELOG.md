@@ -1,4 +1,8 @@
 ## 0.1.5 — 2026-09-28
+- Add SumSlide/PPTX to the product description and status message.
+- Require PPTX in WOPI discovery together with DOCX and XLSX; an incomplete two-editor stack now
+  fails the connection check instead of appearing healthy.
+- Package prepared for live presentation acceptance; not submitted to the App Store.
 - Release metadata now matches the measured 28 September editor images
   (`2026.09.28-amd64`).
 - Two different Nextcloud users can edit the same **workbook** without the later save
