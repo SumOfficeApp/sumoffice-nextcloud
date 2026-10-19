@@ -125,17 +125,30 @@ class Connector {
 		return ($p['scheme'] ?? 'https') . '://' . ($p['host'] ?? '') . $port;
 	}
 
-	/** richdocuments caches discovery in appdata; a stale copy keeps pointing at the old server. */
+	/**
+	 * richdocuments caches discovery and capabilities in appdata; a stale copy keeps pointing at
+	 * the old server. Resetting alone is not enough: Nextcloud Office reads only the cache when a
+	 * file opens and does not fetch on a miss, so after a bare reset every document hangs on
+	 * "Loading…" until its admin page or a background job refetches. Fetch right after the reset,
+	 * the way `occ richdocuments:activate-config` does.
+	 */
 	private function resetOfficeCaches(): void {
-		try {
-			if (class_exists(\OCA\Richdocuments\Service\DiscoveryService::class)) {
-				\OC::$server->get(\OCA\Richdocuments\Service\DiscoveryService::class)->resetCache();
+		foreach ([
+			'OCA\Richdocuments\Service\DiscoveryService',
+			'OCA\Richdocuments\Service\CapabilitiesService',
+		] as $class) {
+			if (!class_exists($class)) {
+				continue;
 			}
-			if (class_exists(\OCA\Richdocuments\Service\CapabilitiesService::class)) {
-				\OC::$server->get(\OCA\Richdocuments\Service\CapabilitiesService::class)->resetCache();
+			try {
+				$service = \OCP\Server::get($class);
+				$service->resetCache();
+				if (method_exists($service, 'fetch')) {
+					$service->fetch();
+				}
+			} catch (\Throwable $e) {
+				$this->logger->warning('sumoffice: could not refresh Nextcloud Office cache ' . $class . ': ' . $e->getMessage());
 			}
-		} catch (\Throwable $e) {
-			$this->logger->warning('sumoffice: could not reset Nextcloud Office caches: ' . $e->getMessage());
 		}
 	}
 }
