@@ -1,3 +1,11 @@
+## 0.1.6 — 2026-10-19
+- Installs on Nextcloud 33, 34 and 35 (was limited to 32). Checked on Nextcloud 35.0.2
+  with Nextcloud Office 12.0.1 and on Nextcloud 32.0.15 with Nextcloud Office 9.2.3:
+  the app installs, Connect succeeds, and a macro workbook opens from Files and saves back.
+- Connect now refreshes Nextcloud Office's cached discovery instead of only clearing it.
+  Nextcloud Office reads that cache when a file opens and does not refetch on a miss, so
+  after Connect every document hung on "Loading…" until the cache was rebuilt elsewhere.
+
 ## 0.1.5 — 2026-09-28
 - Release metadata now matches the measured 28 September editor images
   (`2026.09.28-amd64`).

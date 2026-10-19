@@ -12,7 +12,7 @@ Connects **Nextcloud Office** (richdocuments) to a self-hosted **SumOffice** sta
 
 ## Requirements
 
-- Nextcloud 29–32, Nextcloud Office (richdocuments) ≥ 8.
+- Nextcloud 29–35, Nextcloud Office (richdocuments) ≥ 8.
 - A SumOffice stack reachable from Nextcloud and from users' browsers: compose files and the guide are in [SumOfficeApp/sumoffice-docker](https://github.com/SumOfficeApp/sumoffice-docker) (`nextcloud/`), the three-step page is https://sumoffice.com/nextcloud.
 
 ## Install
