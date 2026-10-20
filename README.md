@@ -1,6 +1,6 @@
 # SumOffice Office for Nextcloud
 
-Connects **Nextcloud Office** (richdocuments) to a self-hosted **SumOffice** stack — SumSheet for Excel files (`.xlsx`, `.xlsm` with macros, `.xlsb`) and SumDoc for Word files (`.docx`) — from one settings field. Files stay real Excel and Word files; macros and Power Query travel with them; Excel and Word open the result without a repair dialog.
+Connects **Nextcloud Office** (richdocuments) to a self-hosted **SumOffice** stack — SumSheet for Excel files (`.xlsx`, `.xlsm` with macros, `.xlsb`), SumDoc for Word (`.docx`) and SumSlide for PowerPoint (`.pptx`) — from one settings field. Files stay real Office files; macros and Power Query travel with spreadsheets.
 
 ![Settings](https://sumoffice.com/media/nextcloud-app-settings.png)
 
@@ -30,6 +30,9 @@ On Nextcloud 31.0.14 with Nextcloud Office 8.8.2, through the normal Files flow:
 - **DOCX, one user:** the change reached the file, embedded pictures intact, package
   valid. **Two users in one DOCX was not measured**, so this release does not claim
   simultaneous Word editing.
+- **PPTX:** 0.1.5 detects and requires the presentation discovery action so an incomplete two-editor
+  stack cannot be saved as healthy. The module package is ready for a live Nextcloud → SumSlide →
+  new-version circle, but that circle has not been claimed or submitted yet.
 - Package integrity was checked directly (parts, media, ZIP structure, VBA bytes).
 - **Desktop Microsoft Excel and Word opened the returned files with no repair
   dialog** — measured 29 September against the published image by digest
@@ -44,6 +47,7 @@ Use the pinned `2026.09.28-amd64` editor images from `SumOfficeApp/sumoffice-doc
 - This collaboration result is measured for Nextcloud/WOPI. Other host adapters
   need their own acceptance run before concurrent editing is promised there.
 - Macros routed "Excel bridge" (COM automation, some ActiveX) stay in Excel; the report names each one.
+- Presentation co-editing is not claimed until two users' changes are observed in one returned PPTX.
 
 ## Licence and support
 

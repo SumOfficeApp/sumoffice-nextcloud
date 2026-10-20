@@ -13,7 +13,7 @@
 			html += '<ul class="sumoffice-errors">' + s.errors.map(function (e) { return '<li>' + escapeHTML(e) + '</li>'; }).join('') + '</ul>';
 		}
 		if (s.connected) {
-			html += '<p class="sumoffice-ok">✓ Connected to <b>' + escapeHTML(s.server || 'SumOffice') + '</b> — ' + (s.formats || []).map(function (f) { return '.' + escapeHTML(f); }).join(', ') + '. Open any spreadsheet or document from Files.</p>';
+			html += '<p class="sumoffice-ok">✓ Connected to <b>' + escapeHTML(s.server || 'SumOffice') + '</b> — ' + (s.formats || []).map(function (f) { return '.' + escapeHTML(f); }).join(', ') + '. Open any spreadsheet, document or presentation from Files.</p>';
 		} else if (s.url && !(s.errors && s.errors.length)) {
 			html += '<p>Not connected.</p>';
 		}
