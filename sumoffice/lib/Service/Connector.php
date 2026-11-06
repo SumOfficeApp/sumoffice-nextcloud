@@ -87,11 +87,12 @@ class Connector {
 					}
 					if (str_contains($name, 'wordprocessingml')) { $formats['docx'] = true; }
 					if (str_contains($name, 'spreadsheetml')) { $formats['xlsx'] = true; }
+					if (str_contains($name, 'presentationml')) { $formats['pptx'] = true; }
 					if (str_contains($name, 'macroEnabled.12') && str_contains($name, 'sheet')) { $formats['xlsm'] = true; }
 					if (str_contains($name, 'binary.macroEnabled')) { $formats['xlsb'] = true; }
 				}
-				if (!isset($formats['docx']) || !isset($formats['xlsx'])) {
-					$errors[] = 'Discovery does not offer both DOCX and XLSX; Nextcloud Office needs the document editor as well. Run SumDoc and SumSheet behind one address — see https://sumoffice.com/nextcloud';
+				if (!isset($formats['docx']) || !isset($formats['xlsx']) || !isset($formats['pptx'])) {
+					$errors[] = 'Discovery does not offer DOCX, XLSX and PPTX. Run SumDoc, SumSheet and SumSlide behind one address — see https://sumoffice.com/nextcloud';
 				}
 				if ($doc->xpath('//app[@name="Capabilities"]') === []) {
 					$errors[] = 'Discovery has no Capabilities entry; Nextcloud Office refuses such a server.';
