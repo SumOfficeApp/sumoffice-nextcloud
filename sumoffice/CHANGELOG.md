@@ -1,3 +1,7 @@
+## 0.1.7 — 2026-11-07
+- Store text only: the summary and the first paragraph now say what you get back,
+  the workbook with its macros intact. No code changes since 0.1.6.
+
 ## 0.1.6 — 2026-10-19
 - Installs on Nextcloud 33, 34 and 35 (was limited to 32). Checked on Nextcloud 35.0.2
   with Nextcloud Office 12.0.1 and on Nextcloud 32.0.15 with Nextcloud Office 9.2.3:
